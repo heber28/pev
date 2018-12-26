@@ -1,0 +1,2 @@
+class Entulho < ApplicationRecord
+end

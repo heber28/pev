@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  proprietario_nome: MyString
+  proprietario_cpf: MyString
+  proprietario_cep: MyString
+  proprietario_endereco: MyString
+  proprietario_telefone: MyString
+  tipo_material: MyString
+  quantidade: MyString
+  destino: MyString
+  transportador_nome: MyString
+  transportador_cpf: MyString
+  transportador_cep: MyString
+  transportador_endereco: MyString
+  transportador_telefone: MyString
+  transportador_tipo_transporte: MyString
+
+two:
+  proprietario_nome: MyString
+  proprietario_cpf: MyString
+  proprietario_cep: MyString
+  proprietario_endereco: MyString
+  proprietario_telefone: MyString
+  tipo_material: MyString
+  quantidade: MyString
+  destino: MyString
+  transportador_nome: MyString
+  transportador_cpf: MyString
+  transportador_cep: MyString
+  transportador_endereco: MyString
+  transportador_telefone: MyString
+  transportador_tipo_transporte: MyString

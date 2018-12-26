@@ -1,0 +1,87 @@
+<%= form_with(model: entulho, local: true) do |form| %>
+  <% if entulho.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(entulho.errors.count, "error") %> prohibited this entulho from being saved:</h2>
+
+      <ul>
+      <% entulho.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :proprietario_nome %>
+    <%= form.text_field :proprietario_nome, size: 50 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proprietario_cpf %>
+    <%= form.text_field :proprietario_cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proprietario_cep %>
+    <%= form.text_field :proprietario_cep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proprietario_endereco %>
+    <%= form.text_field :proprietario_endereco, size: 50 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proprietario_telefone %>
+    <%= form.text_field :proprietario_telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_material %>
+    <%= form.text_field :tipo_material %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantidade %>
+    <%= form.text_field :quantidade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :destino %>
+    <%= form.text_field :destino, size: 50 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transportador_nome %>
+    <%= form.text_field :transportador_nome, size: 50 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transportador_cpf %>
+    <%= form.text_field :transportador_cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transportador_cep %>
+    <%= form.text_field :transportador_cep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transportador_endereco %>
+    <%= form.text_field :transportador_endereco, size: 50 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transportador_telefone %>
+    <%= form.text_field :transportador_telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transportador_tipo_transporte %>
+    <%= form.text_field :transportador_tipo_transporte %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

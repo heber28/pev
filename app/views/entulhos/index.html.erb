@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Entulhos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Proprietario nome</th>
+      <th>Proprietario cpf</th>
+      <th>Proprietario cep</th>
+      <th>Proprietario endereco</th>
+      <th>Proprietario telefone</th>
+      <th>Tipo material</th>
+      <th>Quantidade</th>
+      <th>Destino</th>
+      <th>Transportador nome</th>
+      <th>Transportador cpf</th>
+      <th>Transportador cep</th>
+      <th>Transportador endereco</th>
+      <th>Transportador telefone</th>
+      <th>Transportador tipo transporte</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entulhos.each do |entulho| %>
+      <tr>
+        <td><%= entulho.proprietario_nome %></td>
+        <td><%= entulho.proprietario_cpf %></td>
+        <td><%= entulho.proprietario_cep %></td>
+        <td><%= entulho.proprietario_endereco %></td>
+        <td><%= entulho.proprietario_telefone %></td>
+        <td><%= entulho.tipo_material %></td>
+        <td><%= entulho.quantidade %></td>
+        <td><%= entulho.destino %></td>
+        <td><%= entulho.transportador_nome %></td>
+        <td><%= entulho.transportador_cpf %></td>
+        <td><%= entulho.transportador_cep %></td>
+        <td><%= entulho.transportador_endereco %></td>
+        <td><%= entulho.transportador_telefone %></td>
+        <td><%= entulho.transportador_tipo_transporte %></td>
+        <td><%= link_to 'Show', entulho %></td>
+        <td><%= link_to 'Edit', edit_entulho_path(entulho) %></td>
+        <td><%= link_to 'Destroy', entulho, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entulho', new_entulho_path %>
