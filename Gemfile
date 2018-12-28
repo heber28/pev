@@ -3,7 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'jquery-rails'
 gem 'jquery-mask-plugin'
 gem 'brcep'
+#gem 'brcpfcnpj'
 ruby '2.5.3'
+gem 'cpf_cnpj'
 
 #gem 'humanizer'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

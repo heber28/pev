@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Id:</strong>
+  <%= @descarte.id %>
+</p>
+
+<p>
   <strong>Proprietario nome:</strong>
   <%= @descarte.proprietario_nome %>
 </p>
@@ -55,5 +60,8 @@
   <%= @descarte.transportador_tipo_transporte %>
 </p>
 
-<%= link_to 'Editar', edit_descarte_path(@descarte) %> |
+<%= link_to 'Editar', edit_descarte_path(@descarte) %>
+<% if !session[:user].blank? %>
+ | 
 <%= link_to 'Voltar', descartes_path %>
+<% end %>

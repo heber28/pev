@@ -75,7 +75,12 @@ class DescartesController < ApplicationController
 
     def authenticate
       authenticate_or_request_with_http_basic do |username, password|
-        username == 'cmtu' && password = '123456'
+        if username == 'cmtu' && password = '123456'
+          session[:user] = 'cmtu'
+          true
+        else
+          false
+        end
       end
     end
 

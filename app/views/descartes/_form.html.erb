@@ -2,7 +2,6 @@
   <% if descarte.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(descarte.errors.count, "error") %> prohibited this descarte from being saved:</h2>
-
       <ul>
       <% descarte.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -63,7 +62,7 @@
 
   <div class="field">
     <%= form.label :transportador_tipo_transporte %>
-    <%= form.select :transportador_tipo_transporte, ['Camionete', 'Caminhão', 'Carroça', 'Fiorino ou similar', 'Carro comum'] %>
+    <%= form.select :transportador_tipo_transporte, ['Camionete', 'Caminhão', 'Carroça', 'Carro comum', 'Fioriono ou similar', 'Moto', 'Bicicleta', 'Sem transporte'] %>
   </div>
 
   <div class="actions">

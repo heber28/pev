@@ -2,4 +2,6 @@
 
 <%= render 'form', descarte: @descarte %>
 
+<% if !session[:user].blank? %>
 <%= link_to 'Voltar', descartes_path %>
+<% end %>
