@@ -1,0 +1,87 @@
+<%= form_with(model: descarte, local: true) do |form| %>
+  <% if descarte.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(descarte.errors.count, "error") %> prohibited this descarte from being saved:</h2>
+
+      <ul>
+      <% descarte.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :proprietario_nome %>
+    <%= form.text_field :proprietario_nome, size: 50 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proprietario_cpf %>
+    <%= form.text_field :proprietario_cpf, class: 'cpf' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proprietario_cep %>
+    <%= form.text_field :proprietario_cep, class: 'cep' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proprietario_endereco %>
+    <%= form.text_field :proprietario_endereco, size: 50 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proprietario_telefone %>
+    <%= form.text_field :proprietario_telefone, class: 'phone_with_ddd' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_material %>
+    <%= form.select :tipo_material, ['Restos de construção ou reforma (entulhos)', 'Residuos verdes (galhos de árvores e resto de jardinagem)', 'Eletrônicos (tevê, aparelho de som, computador, dvd, etc)', 'Material reciclável (papelão, vidro, alumínio, ferro)', 'Eletrodomésticos (geladeira, microondas, maquina de lavar, etc)', 'Móveis (armário, mesa, cadeira, cama, sofá, etc)'] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantidade %>
+    <%= form.select :quantidade, ['menos que 3 m³', '3 m³ (equivalente a uma caçamba pequena)', '5 m³ (equivalente a uma caçamba grande)'] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :destino %>
+    <%= form.select :destino, ['Zona Leste (rua Cap. João Busse, Jd Califórnia/Nova Conquista)', 'Zona Norte (rua Helmuth Fischer com a rua Annibal Balarotti, Jd Vista Bela)'] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transportador_nome %>
+    <%= form.text_field :transportador_nome, size: 50 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transportador_cpf %>
+    <%= form.text_field :transportador_cpf, class: 'cpf' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transportador_cep %>
+    <%= form.text_field :transportador_cep, class: 'cep' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transportador_endereco %>
+    <%= form.text_field :transportador_endereco, size: 50 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transportador_telefone %>
+    <%= form.text_field :transportador_telefone, class: 'phone_with_ddd' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transportador_tipo_transporte %>
+    <%= form.select :transportador_tipo_transporte, ['Camionete', 'Caminhão', 'Carroça', 'Fiorino ou similar', 'Carro comum'] %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

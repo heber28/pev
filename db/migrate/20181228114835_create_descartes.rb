@@ -1,6 +1,6 @@
-class CreateEntulhos < ActiveRecord::Migration[5.2]
+class CreateDescartes < ActiveRecord::Migration[5.2]
   def change
-    create_table :entulhos do |t|
+    create_table :descartes do |t|
       t.string :proprietario_nome
       t.string :proprietario_cpf
       t.string :proprietario_cep

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class EntulhoTest < ActiveSupport::TestCase
+class DescarteTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_26_145852) do
+ActiveRecord::Schema.define(version: 2018_12_28_114835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "entulhos", force: :cascade do |t|
+  create_table "descartes", force: :cascade do |t|
     t.string "proprietario_nome"
     t.string "proprietario_cpf"
     t.string "proprietario_cep"

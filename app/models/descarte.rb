@@ -1,0 +1,2 @@
+class Descarte < ApplicationRecord
+end
