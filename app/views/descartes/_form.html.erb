@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :proprietario_nome %>
-    <%= form.text_field :proprietario_nome, size: 50 %>
+    <%= form.label 'Proprietario nome *' %>
+    <%= form.text_field :proprietario_nome, size: 50, :required => true %>
   </div>
 
   <div class="field">
@@ -48,27 +48,12 @@
 
   <div class="field">
     <%= form.label :destino %>
-    <%= form.select :destino, ['Zona Leste (rua Cap. João Busse, Jd Califórnia/Nova Conquista)', 'Zona Norte (rua Helmuth Fischer com a rua Annibal Balarotti, Jd Vista Bela)'] %>
+    <%= form.select :destino, [['Zona Leste (rua Cap. João Busse, Jd Califórnia/Nova Conquista)', 'Zona leste'], ['Zona Norte (rua Helmuth Fischer com a rua Annibal Balarotti, Jd Vista Bela)', 'Zona norte']] %>
   </div>
 
   <div class="field">
-    <%= form.label :transportador_nome %>
-    <%= form.text_field :transportador_nome, size: 50 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :transportador_cpf %>
-    <%= form.text_field :transportador_cpf, class: 'cpf' %>
-  </div>
-
-  <div class="field">
-    <%= form.label :transportador_cep %>
-    <%= form.text_field :transportador_cep, class: 'cep' %>
-  </div>
-
-  <div class="field">
-    <%= form.label :transportador_endereco %>
-    <%= form.text_field :transportador_endereco, size: 50 %>
+    <%= form.label 'Transportador nome *' %>
+    <%= form.text_field :transportador_nome, size: 50, :required => true %>
   </div>
 
   <div class="field">

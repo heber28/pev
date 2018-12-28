@@ -1,5 +1,6 @@
 class DescartesController < ApplicationController
   before_action :set_descarte, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate, only: [:index]
 
   # GET /descartes
   # GET /descartes.json
@@ -28,7 +29,7 @@ class DescartesController < ApplicationController
 
     respond_to do |format|
       if @descarte.save
-        format.html { redirect_to @descarte, notice: 'Descarte was successfully created.' }
+        format.html { redirect_to @descarte, notice: 'O descarte foi criado com sucesso.' }
         format.json { render :show, status: :created, location: @descarte }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class DescartesController < ApplicationController
   def update
     respond_to do |format|
       if @descarte.update(descarte_params)
-        format.html { redirect_to @descarte, notice: 'Descarte was successfully updated.' }
+        format.html { redirect_to @descarte, notice: 'O descarte foi atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @descarte }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class DescartesController < ApplicationController
   def destroy
     @descarte.destroy
     respond_to do |format|
-      format.html { redirect_to descartes_url, notice: 'Descarte was successfully destroyed.' }
+      format.html { redirect_to descartes_url, notice: 'O descarte foi excluido com sucesso.' }
       format.json { head :no_content }
     end
   end
@@ -71,4 +72,11 @@ class DescartesController < ApplicationController
     def descarte_params
       params.require(:descarte).permit(:proprietario_nome, :proprietario_cpf, :proprietario_cep, :proprietario_endereco, :proprietario_telefone, :tipo_material, :quantidade, :destino, :transportador_nome, :transportador_cpf, :transportador_cep, :transportador_endereco, :transportador_telefone, :transportador_tipo_transporte)
     end
+
+    def authenticate
+      authenticate_or_request_with_http_basic do |username, password|
+        username == 'cmtu' && password = '123456'
+      end
+    end
+
 end

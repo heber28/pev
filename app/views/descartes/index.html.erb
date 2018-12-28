@@ -5,20 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>Proprietario nome</th>
-      <th>Proprietario cpf</th>
-      <th>Proprietario cep</th>
-      <th>Proprietario endereco</th>
-      <th>Proprietario telefone</th>
+      <th>Nome do proprietario</th>
       <th>Tipo material</th>
-      <th>Quantidade</th>
       <th>Destino</th>
-      <th>Transportador nome</th>
-      <th>Transportador cpf</th>
-      <th>Transportador cep</th>
-      <th>Transportador endereco</th>
-      <th>Transportador telefone</th>
-      <th>Transportador tipo transporte</th>
+      <th>Transportador</th>
+      <th>Tipo transporte</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -27,22 +18,13 @@
     <% @descartes.each do |descarte| %>
       <tr>
         <td><%= descarte.proprietario_nome %></td>
-        <td><%= descarte.proprietario_cpf %></td>
-        <td><%= descarte.proprietario_cep %></td>
-        <td><%= descarte.proprietario_endereco %></td>
-        <td><%= descarte.proprietario_telefone %></td>
         <td><%= descarte.tipo_material %></td>
-        <td><%= descarte.quantidade %></td>
         <td><%= descarte.destino %></td>
         <td><%= descarte.transportador_nome %></td>
-        <td><%= descarte.transportador_cpf %></td>
-        <td><%= descarte.transportador_cep %></td>
-        <td><%= descarte.transportador_endereco %></td>
-        <td><%= descarte.transportador_telefone %></td>
         <td><%= descarte.transportador_tipo_transporte %></td>
-        <td><%= link_to 'Show', descarte %></td>
-        <td><%= link_to 'Edit', edit_descarte_path(descarte) %></td>
-        <td><%= link_to 'Destroy', descarte, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', descarte %></td>
+        <td><%= link_to 'Editar', edit_descarte_path(descarte) %></td>
+        <td><%= link_to 'Excluir', descarte, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -50,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Descarte', new_descarte_path %>
+<%= link_to 'Novo Descarte', new_descarte_path %>
