@@ -4,16 +4,16 @@ class Descarte < ApplicationRecord
 
   private
 
-  #require "cpf_cnpj"  
+  require "cpf_cnpj"  
 
   def verificar_cpf
     false
-    #if !proprietario_cpf.blank?
-    #  if !CPF.valid?(self.proprietario_cpf)
-    #    errors.add(:cpf, "Cpf inválido")
-    #    false
-    #  end
-    #end
+    if !proprietario_cpf.blank?
+      if !CPF.valid?(self.proprietario_cpf)
+        errors.add(:cpf, "inválido")
+        throw :abort
+      end
+    end
   end
 
 end
