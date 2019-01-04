@@ -6,6 +6,7 @@ gem 'brcep'
 #gem 'brcpfcnpj'
 ruby '2.5.3'
 gem 'cpf_cnpj'
+gem 'will_paginate'
 
 #gem 'humanizer'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
