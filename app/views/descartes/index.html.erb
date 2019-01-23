@@ -11,6 +11,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Nome do proprietario</th>
       <th>Tipo material</th>
       <th>Destino</th>
@@ -23,6 +24,7 @@
   <tbody>
     <% @descartes.each do |descarte| %>
       <tr>
+        <td><%= link_to descarte.id, descarte %></td>
         <td><%= descarte.proprietario_nome %></td>
         <td><%= descarte.tipo_material %></td>
         <td><%= descarte.destino %></td>

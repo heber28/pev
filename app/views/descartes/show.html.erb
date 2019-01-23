@@ -26,6 +26,11 @@
 </p>
 
 <p>
+  <strong>Proprietario numero:</strong>
+  <%= @descarte.proprietario_numero %>
+</p>
+
+<p>
   <strong>Proprietario telefone:</strong>
   <%= @descarte.proprietario_telefone %>
 </p>
@@ -62,6 +67,8 @@
 
 <%= link_to 'Editar', edit_descarte_path(@descarte) %>
 <% if !session[:user].blank? %>
+ | 
+<%= link_to 'Novo', new_descarte_path %>
  | 
 <%= link_to 'Voltar', descartes_path %>
 <% end %>

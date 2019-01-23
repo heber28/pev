@@ -77,7 +77,7 @@ class DescartesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def descarte_params
-      params.require(:descarte).permit(:proprietario_nome, :proprietario_cpf, :proprietario_cep, :proprietario_endereco, :proprietario_telefone, :tipo_material, :quantidade, :destino, :transportador_nome, :transportador_cpf, :transportador_cep, :transportador_endereco, :transportador_telefone, :transportador_tipo_transporte)
+      params.require(:descarte).permit(:proprietario_nome, :proprietario_cpf, :proprietario_cep, :proprietario_endereco, :proprietario_numero, :proprietario_telefone, :tipo_material, :quantidade, :destino, :transportador_nome, :transportador_cpf, :transportador_cep, :transportador_endereco, :transportador_telefone, :transportador_tipo_transporte)
     end
 
     def authenticate
