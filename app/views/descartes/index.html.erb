@@ -4,9 +4,10 @@
 
 <form>
   Data:
-  <input type="date" name="data">
+  <input type="date" name="data" value="<%= @data.strftime("%Y-%m-%d") %>">
+  <%= submit_tag "Pesquisar" %>
 </form> 
-
+<br/>
 <table>
   <thead>
     <tr>

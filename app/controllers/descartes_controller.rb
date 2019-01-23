@@ -6,10 +6,11 @@ class DescartesController < ApplicationController
   # GET /descartes.json
   def index
     if params[:data].blank?
+      @data = Date.today
       @descartes = Descarte.where('created_at >= ?', Date.today)
     else
-      data = DateTime.strptime(params[:data], "%d/%m/%Y").to_datetime
-      @descartes = Descarte.where('created_at >= ?', data)
+      @data = DateTime.strptime(params[:data], "%Y-%m-%d").to_datetime
+      @descartes = Descarte.where('created_at >= ?', @data)
     end
     @descartes = @descartes.paginate(:page => params[:page], :per_page => 30)
   end
